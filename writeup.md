@@ -66,7 +66,7 @@ Here's how concatenated color histogram for a white car looks like:
 I used `StandardScaler` to normalize training data. Then I trained a linear SVM using 1000 examples from `vehicles/KITTI_extracted`, `vehicles/GTI_Right`, `vehicles/GTI_Far` and 500 examples from `non-vehicles/GTI/`, `non-vehicles/Extras/` and additional set of non-vehicle samples `non-vehicles/my/` to better avoid false positives. This is reasonable because in real life driverless car usually has information about _static_ surroundings including pictures such as from Google Street View. I used 30% of the image set for validation.
 `LinearSVC` was overfitting too much so I tried `penalty=l1` and various `C` parameters and settled on leaving everything as default and setting `C=0.01`.
 
-###Sliding Window Search
+### Sliding Window Search
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
@@ -96,7 +96,7 @@ Ultimately I searched on two scales using gray 1-channel HOG features plus spati
 ### Video Implementation
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./project_video-output.mp4)
 
 ---
 
